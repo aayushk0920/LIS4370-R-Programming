@@ -1,0 +1,32 @@
+#Load necessary library
+library(dplyr)
+
+#Create the data vectors
+Name <- c("Jeb", "Donald", "Ted", "Marco", "Carly", "Hillary", "Bernie")
+ABC_Results <- c(4, 62, 51, 21, 2, 14, 15)
+CBS_Results <- c(12, 75, 43, 19, 1, 21, 19)
+
+#Create the dataframe
+poll_data <- data.frame(
+  Name = Name,
+  ABC_Results = ABC_Results,
+  CBS_Results = CBS_Results
+)
+
+#Sort the dataframe based on ABC_political_poll_results in descending order
+sorted_poll_data <- poll_data %>%
+  arrange(desc(ABC_Results))
+
+#Print the sorted dataframe
+print(sorted_poll_data)
+
+     Name ABC_Results CBS_Results
+1  Donald          62          75
+2     Ted          51          43
+3   Marco          21          19
+4  Bernie          15          19
+5 Hillary          14          21
+6     Jeb           4          12
+7   Carly           2           1
+
+https://wordpress.com/post/aayushk7.wordpress.com/412
